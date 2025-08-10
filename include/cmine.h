@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   cmine.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: atahiri- <atahiri-@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/08/10 16:43:02 by atahiri-          #+#    #+#             */
+/*   Updated: 2025/08/10 16:43:13 by atahiri-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef CMINE_H
 # define CMINE_H
 
@@ -8,6 +20,9 @@
 # include "str_utils.h"
 
 typedef int t_bool;
+
+# define TRUE (1)
+# define FALSE (0)
 
 typedef struct s_cell {
 	t_bool	is_mine;

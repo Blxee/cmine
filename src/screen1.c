@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   screen1.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: atahiri- <atahiri-@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/08/10 16:43:39 by atahiri-          #+#    #+#             */
+/*   Updated: 2025/08/10 17:06:04 by blxee            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "cmine.h"
 
 t_screen	*screen_create()
@@ -7,7 +19,7 @@ t_screen	*screen_create()
 	scr = malloc(sizeof(t_screen));
 	if (!scr)
 		return (NULL);
-	scr->buf = malloc
+	// scr->buf = malloc
 	return (scr);
 }
 
