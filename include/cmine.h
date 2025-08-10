@@ -5,6 +5,7 @@
 # include <stdlib.h>
 
 # include "screen.h"
+# include "str_utils.h"
 
 typedef int t_bool;
 
