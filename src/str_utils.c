@@ -1,3 +1,4 @@
+#include "cmine.h"
 
 int ft_strlen(char *str)
 {
@@ -28,4 +29,25 @@ int ft_strlcat(char *dest, char *src, int n)
 	if (n > 0)
 		dest[dest_len + i] = '\0';
 	return (dest_len + src_len)
+}
+
+char	*ft_strext(char **dest, char *src, int *n)
+{
+	int dest_len;
+	int src_len;
+	char *new_dest;
+
+	dest_len = ft_strlen(dest);
+	src_len = ft_strlen(src);
+
+	if (dest_len + src_len >= n - 1)
+	{
+		*n *= 2;
+		new_dest = malloc(sizeof(char) * (*n));
+		ft_strlcat(new_dest, *dest, *n);
+		free(*dest);
+		*dest = new_dest;
+	}
+	ft_strlcat(*dest, src, *n);
+	return (*dest);
 }
