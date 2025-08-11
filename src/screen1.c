@@ -6,7 +6,7 @@
 /*   By: atahiri- <atahiri-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/10 16:43:39 by atahiri-          #+#    #+#             */
-/*   Updated: 2025/08/10 17:36:38 by atahiri-         ###   ########.fr       */
+/*   Updated: 2025/08/11 19:26:58 by atahiri-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,12 @@ t_screen	*screen_create()
 	return (scr);
 }
 
-void		screen_clear(t_screen *scr, t_color color);
+void		screen_clear(t_screen *scr, t_color color)
+{
+	scr->clear_color = color;
+	ft_strext(&scr->buf, "\x1B[4", &scr->buf_len);
+	ft_strext(&scr->buf, (char *)&scr->clear_color, &scr->buf_len);
+	ft_strext(&scr->buf, "m\x1b[2J", &scr->buf_len);
+}
+
 void		screen_set_fg_color(t_screen *scr, t_color color);
-void		screen_set_bg_color(t_screen *scr, t_color color);

@@ -1,28 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   screen2.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: atahiri- <atahiri-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/10 16:43:35 by atahiri-          #+#    #+#             */
-/*   Updated: 2025/08/11 19:38:08 by atahiri-         ###   ########.fr       */
+/*   Created: 2025/08/11 14:42:23 by atahiri-          #+#    #+#             */
+/*   Updated: 2025/08/11 14:52:51 by atahiri-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cmine.h"
 
-int main(void)
-{
-	t_screen *scr;
-	char inp;
+void		screen_set_fg_color(t_screen *scr, t_color color);
+void		screen_set_bg_color(t_screen *scr, t_color color);
+void		screen_put_char(t_screen *scr, char c);
 
-	enable_raw_mode();
-	write(1, "\x1B[?1049h", 9);
-	scr = screen_create();
-	screen_clear(scr, BLUE);
-	screen_flush(scr);
-	write(1, "\x1b[5;5Hhello\nworld", 17);
-	while(read(0, &inp, 1) == 1 && inp != 'q');
-	return (0);
+void		screen_flush(t_screen *scr)
+{
+	write(STDOUT_FILENO, scr->buf, ft_strlen(scr->buf));
 }
+
+void		screen_free(t_screen *scr);
