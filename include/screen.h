@@ -6,12 +6,14 @@
 /*   By: atahiri- <atahiri-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/10 16:43:18 by atahiri-          #+#    #+#             */
-/*   Updated: 2025/08/10 17:28:49 by blxee            ###   ########.fr       */
+/*   Updated: 2025/08/10 17:35:35 by atahiri-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SCREEN_H
-#define SCREEN_H
+# define SCREEN_H
+
+# define SCREEN_BUF_LEN (1024)
 
 typedef enum e_color {
 	BLACK,

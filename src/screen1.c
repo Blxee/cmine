@@ -6,7 +6,7 @@
 /*   By: atahiri- <atahiri-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/10 16:43:39 by atahiri-          #+#    #+#             */
-/*   Updated: 2025/08/10 17:06:04 by blxee            ###   ########.fr       */
+/*   Updated: 2025/08/10 17:36:38 by atahiri-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,11 @@
 t_screen	*screen_create()
 {
 	t_screen	*scr;
-
 	scr = malloc(sizeof(t_screen));
 	if (!scr)
 		return (NULL);
-	// scr->buf = malloc
+	src->buf_len = SCREEN_BUF_LEN;
+	src->buf = malloc(sizeof(char) * SCREEN_BUF_LEN);
 	return (scr);
 }
 
