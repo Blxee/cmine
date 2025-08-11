@@ -37,6 +37,8 @@ typedef struct s_screen {
 	t_color	bg_color;
 }	t_screen;
 
+void		disable_raw_mode();
+void		enable_raw_mode();
 t_screen	*screen_create();
 void		screen_clear(t_screen *scr, t_color color);
 void		screen_set_fg_color(t_screen *scr, t_color color);

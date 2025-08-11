@@ -15,6 +15,7 @@
 
 # include <unistd.h>
 # include <stdlib.h>
+# include <termios.h>
 
 # include "screen.h"
 # include "str_utils.h"

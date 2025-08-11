@@ -14,7 +14,10 @@
 
 int main(void)
 {
-	write(1, "\x1B[?1049\x1B[44m\x1b[2JhHello, World!\n", 32);
-	read(0, &(char){0}, 1);
+	char inp;
+
+	//write(1, "\x1B[?1049\x1B[44m\x1b[2JhHello, World!\n", 32);
+	enable_raw_mode();
+	while(read(0, &inp, 1) == 1 && inp != 'q');
 	return (0);
 }
