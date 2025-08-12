@@ -33,7 +33,7 @@ int ft_strlcat(char *dest, char *src, int n)
 	if (dest_len >= n)
 		return (n + src_len);
 	i = 0;
-	while (dest_len + i < n - 1)
+	while (src[i] && dest_len + i < n - 1)
 	{
 		dest[dest_len + i] = src[i];
 		i++;

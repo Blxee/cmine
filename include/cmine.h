@@ -26,6 +26,7 @@ typedef int t_bool;
 # define FALSE (0)
 
 typedef struct s_cell {
+	t_bool	is_covered;
 	t_bool	is_mine;
 	t_bool	is_flagged;
 	int		nearby_bombs;
@@ -37,5 +38,8 @@ typedef struct s_board {
 	int		height;
 	int		mines;
 }	t_board;
+
+t_board	*board_create(int width, int height, int mines);
+void	board_show(t_board *board, t_screen *scr);
 
 #endif
